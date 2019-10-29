@@ -1,0 +1,3 @@
+([('BookStore',
+   '/Users/Williams/codes/python/Bookstore/dist/BookStore',
+   'EXECUTABLE')],)
