@@ -1,0 +1,19 @@
+##Create virtual env
+python3 -m venv env
+
+#Activate Virtual env
+source env/bin/activate
+
+#Re-order directory
+mv aaronsite/manage.py ./
+mv aaronsite/aaronsite/* aaronsite
+rm -r aaronsite/aaronsite/
+
+##Kill port
+sudo lsof -t -i tcp:8000 | xargs kill -9
+sudo lsof -t -i tcp:8090 | xargs kill -9
+
+###remove non empty directory
+m -r  .git
+
+### docker run -d -p 5432:5432 --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword postgres
